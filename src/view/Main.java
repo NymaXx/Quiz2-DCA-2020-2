@@ -28,6 +28,8 @@ public class Main extends PApplet{
 		background(0);
 		
 	log.paint();
+	log.delete();
+	
 		
 	
 		

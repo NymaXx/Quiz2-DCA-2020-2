@@ -59,6 +59,10 @@ public class Hero extends Ship {
 		 }
 	 }
 	 
+	 
+	 
+	 
+	 
 	 /*public void shoot() {
 		 
 		 if(app.keyCode == 32) {

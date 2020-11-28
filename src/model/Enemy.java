@@ -44,15 +44,14 @@ public class Enemy extends Ship implements Runnable{
 				//System.out.println(this.posY);
 			}
 			
-		
-			
-	
-			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			}
 		}
+	
+	
+	
 	
 	}
 	

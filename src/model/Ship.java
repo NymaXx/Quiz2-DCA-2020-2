@@ -8,7 +8,7 @@ public class Ship implements Runnable{
 	 protected float posY;
 	 protected float speedX;
 	 protected float speedY;
-	 protected Boolean isDead;
+	 protected boolean isVivo;
 	public PApplet app;
 		
 		Ship(PApplet app){
@@ -17,7 +17,7 @@ public class Ship implements Runnable{
 			this.posY=posY;
 			this.speedX=speedX;
 			this.speedY=speedY;
-			this.isDead= false;
+			this.isVivo= true;
 			
 			
 			
@@ -63,12 +63,16 @@ public class Ship implements Runnable{
 		this.speedY = speedY;
 	}
 
-	public Boolean getIsDead() {
-		return isDead;
+	
+
+
+
+	public boolean isVivo() {
+		return isVivo;
 	}
 
-	public void setIsDead(Boolean isDead) {
-		this.isDead = isDead;
+	public void setVivo(boolean isVivo) {
+		this.isVivo = isVivo;
 	}
 
 	@Override

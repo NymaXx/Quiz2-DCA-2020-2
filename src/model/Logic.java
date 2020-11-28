@@ -11,7 +11,7 @@ public class Logic extends PApplet implements Runnable{
 	private Hero hero;
 	public PApplet app;
 	private int dataEnemy;
-	private int point;
+	private float point;
 	
 	
 		public Logic(PApplet app){
@@ -20,6 +20,7 @@ public class Logic extends PApplet implements Runnable{
 				point=0;
 				
 				enemy = new ArrayList<Enemy>();
+				
 				bullet = new ArrayList<Bullet>();
 				
 				hero = new Hero(app);
@@ -29,9 +30,7 @@ public class Logic extends PApplet implements Runnable{
 		for (int i = 0; i < dataEnemy; i++) {
 			Enemy e = new Enemy(app,60*i,30);
 			enemy.add(e);
-			}
-				
-		//new Thread(hero).start();			
+			}	
 				
 		
 		}
@@ -61,32 +60,21 @@ public class Logic extends PApplet implements Runnable{
 			 bullet.get(i).paint();
 			 bullet.get(i).setPosX(hero.getPosX());
 			 new Thread(bullet.get(i)).start();	
-			 System.out.println(bullet.size());
+			// System.out.println(bullet.size());
 		 }
 	}
 	
 	
-	public void moveHero() {
+	public void moveHero() {  //movimiento del Heroe
 		new Thread(hero).start();
 	}
 	
 	
-	public void shoot() {
+	public void shoot() {  //Disparo de balas
 		 
 		 if(app.keyCode == 32) {
 			 Bullet b = new Bullet(app);
 			 bullet.add(b);
-			 
-			 
-			/* for(int i=0; i<bullet.size(); i++) {
-				 b=bullet.get(i);
-				
-				 b.paint();
-				 b.setPosX(hero.getPosX());
-				 new Thread(b).start();	
-				 System.out.println(bullet.size());
-			 }*/
-			
 		 }
 	}
 	
@@ -94,11 +82,39 @@ public class Logic extends PApplet implements Runnable{
 
 	public void run() {
 		// TODO Auto-generated method stub
+		System.out.println(enemy.size());
+		
 			 for(int e = 0; e < enemy.size(); e++) {
+				 Enemy n = enemy.get(e);
 				 for(int u = 0; u < bullet.size();u++) {
-					 
-				 		}
-			 		}
+					 Bullet a = bullet.get(u);
+				 		
+					 if(PApplet.dist(n.getPosX(), n.getPosY(), a.getPosX(), a.getPosY())<= 20) {
+						 enemy.remove(n);
+						 bullet.remove(a);
+						 point++;
+						 System.out.println(bullet.size());	 
+					 			}
+				 			}
+			 			}
+					}
+	
+	
+	public void delete() {
+		
+		for(int e = 0; e < enemy.size(); e++) {
+			 Enemy n = enemy.get(e);
+			 for(int u = 0; u < bullet.size();u++) {
+				 Bullet a = bullet.get(u);
+			 		
+				 if(PApplet.dist(n.getPosX(), n.getPosY(), a.getPosX(), a.getPosY())<= 20) {
+					 enemy.remove(n);
+					 bullet.remove(a);
+					 point++;
+					 System.out.println(bullet.size());
+				 			}
+			 			}
+		 			}
 				}
 	
 	
