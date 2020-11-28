@@ -6,9 +6,9 @@ import processing.core.PApplet;
 public class Logic extends PApplet implements Runnable{
 
 	
-	private ArrayList<Enemy> enemy;
+	public ArrayList<Enemy> enemy;
 	private ArrayList<Bullet> bullet;
-	private Hero hero;
+	public Hero hero;
 	public PApplet app;
 	private int dataEnemy;
 	private float point;
