@@ -31,7 +31,7 @@ public class Logic extends PApplet implements Runnable{
 			enemy.add(e);
 			}
 				
-		new Thread(hero).start();			
+		//new Thread(hero).start();			
 				
 		
 		}
@@ -40,27 +40,54 @@ public class Logic extends PApplet implements Runnable{
 		
 		
 	public void paint() {
-		
+	//pintado de los enemigos
 		for (int i = 0; i < enemy.size(); i++) {
-			//enemy.get(i).setPosX(enemy.get(i).getPosX()*i);
 			enemy.get(i).paint();
 			new Thread(enemy.get(i)).start();
 		}
+		
+	//pintado del heroe
 			hero.paint();
 		
-		
-			
-			
-			
+	//pintado del contador de puntos
 		app.fill(255);
 		app.textSize(15);
 		app.text("SCORE: "+ point ,13,20);
+		
+	//pintado de las balas
+		for(int i=0; i<bullet.size(); i++) {
+			 bullet.get(i);
+			
+			 bullet.get(i).paint();
+			 bullet.get(i).setPosX(hero.getPosX());
+			 new Thread(bullet.get(i)).start();	
+			 System.out.println(bullet.size());
+		 }
 	}
 	
 	
-	public void keys() {
-	hero.run();
-	hero.shoot();
+	public void moveHero() {
+		new Thread(hero).start();
+	}
+	
+	
+	public void shoot() {
+		 
+		 if(app.keyCode == 32) {
+			 Bullet b = new Bullet(app);
+			 bullet.add(b);
+			 
+			 
+			/* for(int i=0; i<bullet.size(); i++) {
+				 b=bullet.get(i);
+				
+				 b.paint();
+				 b.setPosX(hero.getPosX());
+				 new Thread(b).start();	
+				 System.out.println(bullet.size());
+			 }*/
+			
+		 }
 	}
 	
 	
@@ -70,13 +97,11 @@ public class Logic extends PApplet implements Runnable{
 			 for(int e = 0; e < enemy.size(); e++) {
 				 for(int u = 0; u < bullet.size();u++) {
 					 
-				 }
-			 }
-		
-		
-		
-		
-		
-	}
+				 		}
+			 		}
+				}
+	
+	
 
+	
 }

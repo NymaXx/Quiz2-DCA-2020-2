@@ -40,7 +40,8 @@ public class Main extends PApplet{
 	
 	public void keyPressed() {
 		
-		log.keys();
+		log.moveHero();
+		log.shoot();
 		
 	}
 

@@ -37,29 +37,7 @@ public class Hero extends Ship {
 	}
 	 
 	 public void run() {
-		 
 		 move();		
-		 
-		 
-		 
-		 
-		 /* switch(app.keyCode) {
-		 
-		 
-		 case PApplet.LEFT:
-		 if(this.posX >= 30 && this.posX <= 770) {
-				this.posX-=this.speedX;
-				}
-		 break;
-		 
-		 case PApplet.RIGHT:
-				if(this.posX >= 30 && this.posX <= 770) {
-					this.posX+=this.speedX;
-					}
-				break;
-				
-		 }*/
-		 
 	 }
 	 
 	 
@@ -81,7 +59,7 @@ public class Hero extends Ship {
 		 }
 	 }
 	 
-	 public void shoot() {
+	 /*public void shoot() {
 		 
 		 if(app.keyCode == 32) {
 			 Bullet b = new Bullet(app);
@@ -95,23 +73,11 @@ public class Hero extends Ship {
 				 b.setPosX(this.posX);
 				 new Thread(b).start();	
 				 System.out.println(bullet.size());
-			 }
+			 									}
 			
-		 }
+		 						}	
 		 
-		 
-		 
+	 			}*/
 		
-		 
-	 }
-	 
-	 
-	
-	
-	
-
-	
-
-	
 	
 }

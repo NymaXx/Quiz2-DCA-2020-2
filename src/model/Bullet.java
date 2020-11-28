@@ -13,7 +13,7 @@ public class Bullet extends PApplet implements Runnable {
 		Bullet(PApplet app){
 			this.app=app;
 			this.posX=posX;
-			this.speed= 5;
+			this.speed= 20;
 			this.posY=450;
 			
 		}
