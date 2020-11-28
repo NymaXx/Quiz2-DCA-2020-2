@@ -48,10 +48,15 @@ public class Logic extends PApplet implements Runnable{
 	//pintado del heroe
 			hero.paint();
 		
-	//pintado del contador de puntos
+	//pintado del contador de puntos e indicaciones
 		app.fill(255);
 		app.textSize(15);
-		app.text("SCORE: "+ point ,13,20);
+		app.text("Puntaje: "+ point ,13,20);
+		app.textSize(15);
+		app.text("Acierta en el punto debil de los enemigos",494,20);
+		app.fill(255,0,0,70);
+		app.stroke(255,0,144);
+		app.ellipse(475, 8, 10, 10);
 		
 	//pintado de las balas
 		for(int i=0; i<bullet.size(); i++) {
@@ -82,25 +87,25 @@ public class Logic extends PApplet implements Runnable{
 
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println(enemy.size());
+		//System.out.println(enemy.size());
 		
 			 for(int e = 0; e < enemy.size(); e++) {
 				 Enemy n = enemy.get(e);
 				 for(int u = 0; u < bullet.size();u++) {
 					 Bullet a = bullet.get(u);
 				 		
-					 if(PApplet.dist(n.getPosX(), n.getPosY(), a.getPosX(), a.getPosY())<= 20) {
+					 if(PApplet.dist(n.getPosX(), n.getPosY(), a.getPosX(), a.getPosY())<= 10) {
 						 enemy.remove(n);
 						 bullet.remove(a);
 						 point++;
-						 System.out.println(bullet.size());	 
+						 System.out.println(enemy.size());	 
 					 			}
 				 			}
 			 			}
 					}
 	
 	
-	public void delete() {
+	/*public void delete() {
 		
 		for(int e = 0; e < enemy.size(); e++) {
 			 Enemy n = enemy.get(e);
@@ -115,7 +120,7 @@ public class Logic extends PApplet implements Runnable{
 				 			}
 			 			}
 		 			}
-				}
+				}*/
 	
 	
 

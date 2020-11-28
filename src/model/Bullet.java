@@ -21,7 +21,8 @@ public class Bullet extends PApplet implements Runnable {
 	
 	
 	public void paint() {
-		app.ellipse(this.posX, this.posY, 7, 7);
+		app.fill(0,255,255);
+		app.ellipse(this.posX, this.posY, 8, 8);
 	}
 	
 	

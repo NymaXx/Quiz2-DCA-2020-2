@@ -22,7 +22,9 @@ public class Enemy extends Ship implements Runnable{
 		app.fill(102,0,161);
 		app.ellipseMode(PApplet.CORNER);
 		app.ellipse(this.posX, this.posY, 50,20);
-		app.text(counter,90,20);
+		app.fill(255,0,0,70);
+		app.ellipse(this.posX, this.posY, 10,10);
+		
 		
 	}
 	
