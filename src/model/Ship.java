@@ -8,7 +8,6 @@ public class Ship implements Runnable{
 	 protected float posY;
 	 protected float speedX;
 	 protected float speedY;
-	 protected boolean isVivo;
 	public PApplet app;
 		
 		Ship(PApplet app){
@@ -17,7 +16,6 @@ public class Ship implements Runnable{
 			this.posY=posY;
 			this.speedX=speedX;
 			this.speedY=speedY;
-			this.isVivo= true;
 			
 			
 			
@@ -63,27 +61,13 @@ public class Ship implements Runnable{
 		this.speedY = speedY;
 	}
 
-	
-
-
-
-	public boolean isVivo() {
-		return isVivo;
-	}
-
-	public void setVivo(boolean isVivo) {
-		this.isVivo = isVivo;
-	}
-
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
-	
-	
+
+
 	
 
 }

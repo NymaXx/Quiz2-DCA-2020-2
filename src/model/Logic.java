@@ -15,16 +15,16 @@ public class Logic extends PApplet implements Runnable{
 	
 	
 
-		public Logic(PApplet app){
-				this.app=app;
-				dataEnemy=13;
-				point=0;
+	public Logic(PApplet app){
+		this.app=app;
+		dataEnemy=13;
+		point=0;
 				
-				enemy = new ArrayList<Enemy>();
+		enemy = new ArrayList<Enemy>();
 				
-				bullet = new ArrayList<Bullet>();
+		bullet = new ArrayList<Bullet>();
 				
-				hero = new Hero(app);
+		hero = new Hero(app);
 				
 				
 				
@@ -32,8 +32,6 @@ public class Logic extends PApplet implements Runnable{
 			Enemy e = new Enemy(app,60*i,30);
 			enemy.add(e);
 			}	
-				
-		
 		}
 			
 			
@@ -71,9 +69,11 @@ public class Logic extends PApplet implements Runnable{
 	}
 	
 	
+	
 	public void moveHero() {  //movimiento del Heroe
 		new Thread(hero).start();
 	}
+	
 	
 	
 	public void shoot() {  //Disparo de balas
@@ -87,8 +87,6 @@ public class Logic extends PApplet implements Runnable{
 	
 
 	public void run() {
-		// TODO Auto-generated method stub
-		//System.out.println(enemy.size());
 		
 			 for(int e = 0; e < enemy.size(); e++) {
 				 Enemy n = enemy.get(e);
@@ -106,17 +104,17 @@ public class Logic extends PApplet implements Runnable{
 					}
 	
 	
+	
 
 	public float getPoint() {
-	return point;
-}
+			return point;
+		}
 
 
 
-
-public void setPoint(float point) {
-	this.point = point;
-}
+	public void setPoint(float point) {
+			this.point = point;
+		}
 	
 
 	

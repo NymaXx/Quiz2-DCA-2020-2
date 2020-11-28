@@ -23,9 +23,9 @@ public class Main extends PApplet{
 	public void setup() {
 		log= new Logic(this);
 		screen=0;
-		
-		
 	}
+	
+	
 	
 	public void draw() {
 		background(0);
@@ -80,14 +80,6 @@ public class Main extends PApplet{
 			break;
 		}
 
-	
-		
-	
-	
-	
-	
-	//para saber posicion actual del mouse, fines practicos
-		text("X" + mouseX + "Y" + mouseY, mouseX, mouseY);
 	}
 	
 	
@@ -95,16 +87,15 @@ public class Main extends PApplet{
 		for(int i=0; i< log.dataEnemy; i++) {
 			Enemy e = new Enemy(this, 60*i, 30);
 			log.enemy.add(e);
-		}
+			}
 		
 		for(int i=0; i< log.bullet.size(); i++) {
 			Bullet b = log.bullet.get(i);
 			log.bullet.remove(b);
-			
+				}
 		}
-		
-		
-	}
+	
+	
 	public void mousePressed() {
 		if(screen==1 || screen ==2) {
 			screen=0;
@@ -112,6 +103,7 @@ public class Main extends PApplet{
 			log.setPoint((float)0);
 		}
 	}
+	
 	
 	public void keyPressed() {
 			if(screen==0) {

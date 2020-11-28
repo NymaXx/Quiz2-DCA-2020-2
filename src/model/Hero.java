@@ -58,30 +58,5 @@ public class Hero extends Ship {
 				
 		 }
 	 }
-	 
-	 
-	 
-	 
-	 
-	 /*public void shoot() {
-		 
-		 if(app.keyCode == 32) {
-			 Bullet b = new Bullet(app);
-			 bullet.add(b);
-			 
-			 
-			 for(int i=0; i<bullet.size(); i++) {
-				 b=bullet.get(i);
-				
-				 b.paint();
-				 b.setPosX(this.posX);
-				 new Thread(b).start();	
-				 System.out.println(bullet.size());
-			 									}
-			
-		 						}	
-		 
-	 			}*/
-		
 	
 }

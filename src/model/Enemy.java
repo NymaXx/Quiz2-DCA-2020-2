@@ -10,7 +10,6 @@ public class Enemy extends Ship implements Runnable{
 		this.posX=posX;
 		this.posY=posY;
 		this.speedX=-3;
-		
 		this.counter=0;
 		this.speedY=42;
 		
