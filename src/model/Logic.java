@@ -7,13 +7,14 @@ public class Logic extends PApplet implements Runnable{
 
 	
 	public ArrayList<Enemy> enemy;
-	private ArrayList<Bullet> bullet;
+	public ArrayList<Bullet> bullet;
 	public Hero hero;
 	public PApplet app;
-	private int dataEnemy;
-	private float point;
+	public int dataEnemy;
+	public float point;
 	
 	
+
 		public Logic(PApplet app){
 				this.app=app;
 				dataEnemy=13;
@@ -105,23 +106,17 @@ public class Logic extends PApplet implements Runnable{
 					}
 	
 	
-	/*public void delete() {
-		
-		for(int e = 0; e < enemy.size(); e++) {
-			 Enemy n = enemy.get(e);
-			 for(int u = 0; u < bullet.size();u++) {
-				 Bullet a = bullet.get(u);
-			 		
-				 if(PApplet.dist(n.getPosX(), n.getPosY(), a.getPosX(), a.getPosY())<= 20) {
-					 enemy.remove(n);
-					 bullet.remove(a);
-					 point++;
-					 System.out.println(bullet.size());
-				 			}
-			 			}
-		 			}
-				}*/
-	
+
+	public float getPoint() {
+	return point;
+}
+
+
+
+
+public void setPoint(float point) {
+	this.point = point;
+}
 	
 
 	

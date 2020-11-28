@@ -5,7 +5,7 @@ import processing.core.PApplet;
 public class Enemy extends Ship implements Runnable{
 
 		public int counter;
-	Enemy(PApplet app, float posX, float posY) {
+	public Enemy(PApplet app, float posX, float posY) {
 		super(app);
 		this.posX=posX;
 		this.posY=posY;
