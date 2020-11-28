@@ -9,9 +9,10 @@ public class Enemy extends Ship implements Runnable{
 		super(app);
 		this.posX=posX;
 		this.posY=posY;
-		this.speedX=3;
+		this.speedX=-3;
+		
+		this.counter=0;
 		this.speedY=42;
-		this.counter=3;
 		
 		
 	}
@@ -31,24 +32,21 @@ public class Enemy extends Ship implements Runnable{
 		try {
 			this.posX+=this.speedX;
 			
-			if (this.posX < 0 && this.posX > app.width-25) {
+			if (this.posX < 0 || this.posX > app.width-50) {
 				this.speedX *= -1;
 			}
 			
-			Thread.sleep(1000);
-			this.posY+=this.speedY;
-			
-			/*if(app.frameCount% 27 == 0) {
-				counter--;
-				if(counter%3==0) {
-					this.posY+=this.speedY;
-				}
-			}*/
+			if(app.frameCount% 180 == 0) {
+				
+				this.posY+=this.speedY;
+				Thread.sleep(2000);
+				
+				//System.out.println(this.posY);
+			}
 			
 		
 			
-			
-			//System.out.println("works");
+	
 			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

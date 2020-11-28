@@ -5,15 +5,15 @@ import processing.core.PApplet;
 public class Bullet extends PApplet implements Runnable {
 		
 		public PApplet app;
-		public int posX;
-		public int posY;
-		public int speed;
+		public float posX;
+		public float posY;
+		public float speed;
 		public Boolean isCollide;
 	
 		Bullet(PApplet app){
 			this.app=app;
 			this.posX=posX;
-			this.speed= 4;
+			this.speed= 5;
 			this.posY=450;
 			
 		}
@@ -26,40 +26,46 @@ public class Bullet extends PApplet implements Runnable {
 	
 	
 	public void run() {
-			this.posY += this.speed;
+			this.posY -= this.speed;
 		
 	}
-	
 
 
-	public int getPosX() {
+
+	public float getPosX() {
 		return posX;
 	}
 
 
-	public void setPosX(int posX) {
+
+	public void setPosX(float posX) {
 		this.posX = posX;
 	}
 
 
-	public int getPosY() {
+
+	public float getPosY() {
 		return posY;
 	}
 
 
-	public void setPosY(int posY) {
+
+	public void setPosY(float posY) {
 		this.posY = posY;
 	}
 
 
-	public int getSpeed() {
+
+	public float getSpeed() {
 		return speed;
 	}
 
 
-	public void setSpeed(int speed) {
+
+	public void setSpeed(float speed) {
 		this.speed = speed;
 	}
+
 
 
 	public Boolean getIsCollide() {
@@ -67,9 +73,14 @@ public class Bullet extends PApplet implements Runnable {
 	}
 
 
+
 	public void setIsCollide(Boolean isCollide) {
 		this.isCollide = isCollide;
 	}
+	
+
+
+	
 	
 	
 		
