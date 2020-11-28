@@ -28,10 +28,8 @@ public class Ship implements Runnable{
 		}
 		
 		
-	public void run() {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 
 	public float getPosX() {
 		return posX;
@@ -71,6 +69,12 @@ public class Ship implements Runnable{
 
 	public void setIsDead(Boolean isDead) {
 		this.isDead = isDead;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

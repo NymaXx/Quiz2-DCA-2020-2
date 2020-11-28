@@ -20,21 +20,16 @@ public class Bullet extends PApplet implements Runnable {
 	
 	
 	
-	
+	public void paint() {
+		app.ellipse(this.posX, this.posY, 7, 7);
+	}
 	
 	
 	public void run() {
-		try {
-			posY += this.speed;
-			
-			Thread.sleep(20);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			this.posY += this.speed;
+		
 	}
-
-
+	
 
 
 	public int getPosX() {

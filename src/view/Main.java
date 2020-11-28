@@ -20,16 +20,16 @@ public class Main extends PApplet{
 	
 	public void setup() {
 		log= new Logic(this);
-		hero= new Hero(this);
+		hero= new Hero(this, 50,450);
 		
 	}
 	
 	public void draw() {
 		background(0);
 		
-		log.paint();
-		
-		
+	log.paint();
+		//hero.paint();
+	
 		
 		text("X" + mouseX + "Y" + mouseY, mouseX, mouseY);
 	}
@@ -40,7 +40,7 @@ public class Main extends PApplet{
 	
 	public void keyPressed() {
 		//new Thread(hero).start();	
-	
+		
 	}
 
 }

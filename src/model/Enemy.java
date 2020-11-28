@@ -11,7 +11,7 @@ public class Enemy extends Ship implements Runnable{
 		this.posY=posY;
 		this.speedX=3;
 		this.speedY=42;
-		this.counter=30;
+		this.counter=3;
 		
 		
 	}
@@ -48,7 +48,7 @@ public class Enemy extends Ship implements Runnable{
 		
 			
 			
-			System.out.println("works");
+			//System.out.println("works");
 			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

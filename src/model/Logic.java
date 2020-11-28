@@ -12,13 +12,18 @@ public class Logic extends PApplet implements Runnable{
 	public PApplet app;
 	private int dataEnemy;
 	private int point;
+	private Ship ship;
+	
 		public Logic(PApplet app){
 				this.app=app;
 				dataEnemy=13;
 				point=0;
 				enemy = new ArrayList<Enemy>();
 				bullet = new ArrayList<Bullet>();
-				hero = new Hero(this);
+				
+				hero = new Hero(app, 50, 450);
+				ship =  new Ship(this);
+				
 				
 		for (int i = 0; i < dataEnemy; i++) {
 			Enemy e = new Enemy(app,60*i,30);
@@ -28,33 +33,37 @@ public class Logic extends PApplet implements Runnable{
 				}
 				
 		
+			//new Thread(hero).start();			
+				
 		
-			new Thread(hero).start();			
-			
 		}
 			
 			
 		
 		
 	public void paint() {
-		
-		
 		for (int i = 0; i < enemy.size(); i++) {
 			//enemy.get(i).setPosX(enemy.get(i).getPosX()*i);
 			enemy.get(i).paint();
-			
 		}
 		
-		hero.paint();		
+		if(hero!=null) {
+			hero.paint();
+		}
+		
 		app.fill(255);
 		app.textSize(15);
 		app.text("SCORE: "+ point ,13,20);
 		
 		
 	}
+	
+	
 
 	public void run() {
 		// TODO Auto-generated method stub
+		
+		
 		
 		
 		
